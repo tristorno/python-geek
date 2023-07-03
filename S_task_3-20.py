@@ -17,6 +17,7 @@ Q, Z – 10 очков.
 Ф, Щ, Ъ – 10 очков. 
 Напишите программу, которая вычисляет стоимость введенного пользователем слова."""
 
+#Мой вариант
 eng_1 = ('A', "E", "I", "O", "L", "N", "S", "T", "R")
 eng_3 = ("B", "C", "M", "P")
 eng_4 = ("F", "H", "V", "W", "Y")
@@ -99,3 +100,23 @@ for i in range (len(word_list)):
     if word_list[i] in rus_10:
         count += 10
 print (f"ИТОГО: {count}")
+
+#Вариант препода
+
+points = {"AEIOULNSTRAEIOULNSTRАВЕИНОРСТ": 1,
+          "DGДКЛМПУ": 2,
+          "BCMPБГЁЬЯ": 3,
+          "FHVWYЙЫ": 4,
+          "KЖЗХЦЧ": 5,
+          "JXШЭЮ": 8,
+          "QZФЩЪ": 10}
+
+word_ = input ("Введите слово: ")
+score = 0
+
+for letter in word_.upper():
+    for letters in points:
+        if letter in letters:
+            score += points.get(letters)
+
+print(score)
