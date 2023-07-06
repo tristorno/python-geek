@@ -5,12 +5,10 @@ Output: 21
 """
 
 def fibo (num):
-    fibo_res = 0
-    if num == 0:
-        return 0
-    fibo_res = num + fibo(num - 1)
-    return fibo_res
+    if num in [0, 1]:
+        return 1
+    return fibo(num-1) + fibo(num-2)
 
 
-num = 7
-print (fibo(num-1))
+num = int(input("Введите число: "))
+print (fibo(num))

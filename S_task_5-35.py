@@ -6,14 +6,19 @@ Output: yes
 """
 
 def simple_num (num):
-    if num < 2:
+    i = 3
+    if num in [0, 1]:
         return "Неверное число!"
-    i = 2
-    while i < num:
-        if num % i == 0:
-            return 'no'
-        i += 1
-    return 'yes'
+    elif num%2==0:
+        return "Простое число"
+    else:
+        while i < (num//2+1):
+            if num % i == 0:
+                return (f'НЕТ, делитель - {i}')
+            else:
+                i += 2
+                print(i)
+        return 'Простое число'
     
 
 print(simple_num(int(input("Введите число больше единицы: "))))
