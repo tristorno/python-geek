@@ -19,12 +19,9 @@
 
 """
 
-def print_operation_table(operation, num_rows=6, num_columns=6):
-
-НЕ СДЕЛАЛ!!!
-
-def operation
+num_rows = int(input("Введите кол-во строк: "))
+num_columns = int(input("Введите кол-во столбцов: "))
+#print_operation_table(operation, num_rows=6, num_columns=6):
 
 
-
-print(print_operation_table)
+print_operation_table(lambda x, y: x * y)
