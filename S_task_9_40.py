@@ -8,3 +8,4 @@ df = pd.read_csv("california_housing_train.csv")
 
 print(df.head())
 print(df.loc[((df.population > 0) & (df.population < 500)), ['median_house_value']].mean())
+
